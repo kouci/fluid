@@ -1,0 +1,103 @@
+.navbar {
+  background-color: #203040;
+}
+.navbar a {
+  color: white;
+  margin-left: 10px;
+}
+
+.main {
+  min-height: 80vh;
+}
+
+.footer {
+  text-align: center;
+}
+
+.icon {
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+}
+
+.carActionRight {
+  justify-content: flex-end;
+}
+
+.MenuSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.grow {
+  display: flex;
+}
+
+.brandSection {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.description {
+  color: #342f2f;
+  margin-top: 15px;
+  margin-bottom: 70px;
+  text-align: justify;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.section a {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.containerDesc {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 0;
+}
+
+.cardDesc {
+  width: 45%;
+  margin-left: 10px;
+}
+
+.cardDescImage {
+  width: 45%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 510px;
+  object-fit: cover;
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+}

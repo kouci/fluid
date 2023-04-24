@@ -15,6 +15,9 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Helvetica", "Arial", "sans-serif"].join(","),
   },
+  primary : {
+    main: "#fffff"
+  }
 });
 
 export default theme;

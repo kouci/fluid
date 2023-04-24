@@ -1,15 +1,16 @@
 import { useEffect } from "react";
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
-import { ServerStyleSheets } from '@mui/styles';
-import theme from "../theme/theme"
+import theme from "../theme/theme";
+import { Provider } from "react-redux";
+import { wrapper, store } from "../store/Store";
+import { CacheProvider } from "@emotion/react";
 
-export default function MyApp(props) {
+function MyApp(props) {
   const { Component, pageProps } = props;
   const cache = createCache({ key: "css", prepend: true });
-  const sheets = new ServerStyleSheets();
+
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -21,12 +22,14 @@ export default function MyApp(props) {
 
   return (
     <CacheProvider value={cache}>
-      {sheets.collect(
-        <ThemeProvider theme={theme} >
+        <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Component {...pageProps} />
+          <Provider store={store}>
+            <Component {...pageProps} />
+          </Provider>
         </ThemeProvider>
-      )}
     </CacheProvider>
   );
 }
+
+export default wrapper.withRedux(MyApp);
