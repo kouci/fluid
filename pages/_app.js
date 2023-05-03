@@ -4,13 +4,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import createCache from "@emotion/cache";
 import theme from "../theme/theme";
 import { Provider } from "react-redux";
-import { createWrapper } from "next-redux-wrapper"; // importer createWrapper
-import { store } from "../store/store";
+import { createWrapper } from "next-redux-wrapper";
+import store from "../store/store";
 import { CacheProvider } from "@emotion/react";
 
 function MyApp(props) {
   const { Component, pageProps } = props;
   const cache = createCache({ key: "css", prepend: true });
+
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -22,18 +23,16 @@ function MyApp(props) {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
-      </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Provider store={store}>
+            <Component {...pageProps} />
+          </Provider>
+        </ThemeProvider>
     </CacheProvider>
   );
 }
 
-// Envelopper l'application avec createWrapper et wrapper.useWrappedStore()
-const makeStore = () => store;
-const wrapper = createWrapper(makeStore);
+const wrapper = createWrapper(() => store);
 
 export default wrapper.withRedux(MyApp);
