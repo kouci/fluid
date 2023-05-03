@@ -15,7 +15,9 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = await mongoose.connect('mongodb://127.0.0.1:27017/myapp');
+  const db = await mongoose.connect(
+    "mongodb+srv://kociela:admin@cluster0.0nsvwc0.mongodb.net/test"
+  );
   console.log("new connection");
   connection.isConnected = db.connections[0].readyState;
 }
@@ -32,13 +34,12 @@ async function disconnect() {
 }
 
 function convertDocToObj(doc) {
+  doc._id = doc._id.toString();
+  doc.createdAt = doc.createdAt.toString();
+  doc.updatedAt = doc.updatedAt.toString();
 
-  doc._id =doc._id.toString();
-  doc.createdAt =doc.createdAt.toString();
-  doc.updatedAt =doc.updatedAt.toString();
-   
   return doc;
 }
 
-const db = { connect, disconnect,convertDocToObj };
+const db = { connect, disconnect, convertDocToObj };
 export default db;

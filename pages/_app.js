@@ -4,7 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import createCache from "@emotion/cache";
 import theme from "../theme/theme";
 import { Provider } from "react-redux";
-import { wrapper, store } from "../store/Store";
+import { wrapper, store } from "../store/store";
 import { CacheProvider } from "@emotion/react";
 
 function MyApp(props) {
