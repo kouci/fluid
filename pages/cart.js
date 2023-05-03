@@ -57,7 +57,7 @@ const CartScreen = () => {
      }
 
      const checkoutHandler = () => {
-       router.push('/shipping');
+       router.push('/register');
 
 
      }

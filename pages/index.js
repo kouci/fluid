@@ -45,7 +45,7 @@ export default function Home(props) {
     <>
       <Layout>
         <div>
-          <h1>Nos livres </h1>
+          <h1>Nos T-Shirts </h1>
           <Grid container spacing={3}>
             {products.map((product) => (
               <Grid item md={4} key={product.name}>
@@ -61,6 +61,7 @@ export default function Home(props) {
                         component="img"
                         image={product.image}
                         title={product.name}
+                        style={{objectFit: 'contain'}}
                       ></CardMedia>
                       <CardContent>
                         <Typography>{product.name}</Typography>

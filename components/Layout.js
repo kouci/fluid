@@ -17,6 +17,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useSelector } from "react-redux";
 import classes from '../styles/style.module.css'
+import Image from "next/image";
+
 
 const Layout = ({ title, children }) => {
   // récupérer les cart Items
@@ -31,28 +33,24 @@ const Layout = ({ title, children }) => {
         <Toolbar className={classes.MenuSection}>
           <div className={classes.brandSection}>
             <NextLink className={classes.link} href="/" passHref={true}>
-              <Typography className={classes.brand}>Libraire</Typography>
+            <Image src="/images/logo_blanc.png" className={classes.icon} width={200} height={70} style={{objectFit: 'contain'}}  />
             </NextLink>
-            <Icon className={classes.icon} component={MenuBookIcon} />
           </div>
           <div className={classes.grow}>
             <NoSsr>
               {cart.cartItems.length > 0 ? (
                 <Badge color={"secondary"} badgeContent={cart.cartItems.length}>
                   <NextLink className={classes.link} href="/cart" passHref={true}>
-                     <Icon component={ShoppingCartIcon} />
+                     <Icon component={ShoppingCartIcon} style={{fontSize: '25px'}} />
                 </NextLink>
                 </Badge>
               ) : (
                 <NextLink className={classes.link} href="/cart" passHref={true}>
-                     <Icon component={ShoppingCartIcon} />
+                     <Icon component={ShoppingCartIcon} style={{fontSize: '25px'}} />
                 </NextLink>
              
               )}
             </NoSsr>
-            <NextLink className={classes.link} href="/login" passHref={true}>
-              <Icon component={AccountCircleIcon} />
-            </NextLink>
           </div>
         </Toolbar>
       </AppBar>

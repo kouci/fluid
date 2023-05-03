@@ -9,9 +9,9 @@ import Layout from "@/components/Layout";
 import { List, ListItem, TextField } from "@mui/material";
 
 const steps = [
-  "information personnels",
-  "coordonnées bancaire",
-  "Récapitilatif de la prévente",
+  "Informations personnelles",
+  " Coordonnées bancaire",
+  "Récapitulatif de la prévente",
 ];
 const register = () => {
   const [activeStep, setActiveStep] = React.useState(0);
