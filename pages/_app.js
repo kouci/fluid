@@ -5,7 +5,7 @@ import createCache from "@emotion/cache";
 import theme from "../theme/theme";
 import { Provider } from "react-redux";
 import { createWrapper } from "next-redux-wrapper";
-import store from "../store/store";
+import {store} from "../store/store";
 import { CacheProvider } from "@emotion/react";
 
 function MyApp(props) {
