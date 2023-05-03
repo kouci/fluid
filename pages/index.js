@@ -46,7 +46,44 @@ export default function Home(props) {
       <Layout>
         <div>
           <h1>Nos T-Shirts </h1>
-         
+          <Grid container spacing={3}>
+            {products.map((product) => (
+              <Grid item md={4} key={product.name}>
+                <Card>
+                  <NextLink
+                    className={classes.link}
+                    href={`/product/${product.slug}`}
+                    passHref
+                  >
+                    <CardActionArea>
+                      <CardMedia
+                        className={classes.image}
+                        component="img"
+                        image={product.image}
+                        title={product.name}
+                        style={{objectFit: 'contain'}}
+                      ></CardMedia>
+                      <CardContent>
+                        <Typography>{product.name}</Typography>
+                      </CardContent>
+                    </CardActionArea>
+                  </NextLink>
+                  <CardActionArea></CardActionArea>
+                  <CardActions sx={{ justifyContent: "space-between" }}>
+                    <Typography> € {product.price}</Typography>
+                    <Button
+                      className={classes.carActionRight}
+                      size="small"
+                      color="primary"
+                      onClick={() => addToCartHandler(product)}
+                    >
+                    Ajouter au pannier
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </div>
       </Layout>
     </>
