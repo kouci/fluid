@@ -1,9 +1,13 @@
-import { useRouter } from 'next/router'
-import React from 'react'
+import { useRouter } from 'next/router';
+import React, { useEffect } from 'react'
 
 const Shipping = () => {
+
     const router = useRouter();
-    router.push('/login')
+   useEffect(() => {
+    router.push('/login');
+  }, []);
+
 
 
   return (
