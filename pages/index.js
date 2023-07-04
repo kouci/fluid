@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "@/components/Layout";
 import Link from "next/link";
+import InstagramLink from "@/components/InstagramLink";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
           <h1>LET IT FLOW</h1>
           <div className={styles.divTexte}>
             <p>
-              Laisser couler, un slogan mais également une façon de vivre. Ne
+              Laisser couler, une façon de vivre. Ne
               pas se laisser bloquer par les petits problèmes de la vie. Ne pas
               se prendre la tête pour pouvoir avancé !
             </p>
@@ -38,6 +39,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <InstagramLink />
     </Layout>
   );
 }

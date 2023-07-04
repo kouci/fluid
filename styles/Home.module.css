@@ -304,12 +304,12 @@
 }
 
 .overlay h1 {
-  position: relative;
+  position: absolute;
   font-size: 3.5em;
   font-weight: 700;
 
-  left: 500px;
-  bottom: 150px;
+  left: 20%;
+  bottom: 40%;
 }
 
 .overlay p {
@@ -317,10 +317,10 @@
 }
 
 .divTexte {
-  position: relative;
-  width: 300px;
-  left: 500px;
-  bottom: 155px;
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  bottom: 24%;
 }
 
 .button {
@@ -332,10 +332,10 @@
   text-align: center;
   font-size: 10px;
   padding: 5px;
-  width: 250px;
+  width: 40%;
   transition: all 0.5s;
   cursor: pointer;
-  top: 120px;
+  top: 40%;
   position: relative;
   box-shadow: none;
 }
