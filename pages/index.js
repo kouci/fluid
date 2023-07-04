@@ -34,7 +34,7 @@ export default function Home() {
                 fontWeight: "bold",
               }}
             >
-              <p>Pré-Commander dès Maintenant</p>
+              <p>Pré-Commandez dès Maintenant</p>
             </Link>
           </div>
         </div>

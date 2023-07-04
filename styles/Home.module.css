@@ -309,7 +309,7 @@
   font-weight: 700;
 
   left: 20%;
-  bottom: 40%;
+  bottom: 35%;
 }
 
 .overlay p {
@@ -318,9 +318,9 @@
 
 .divTexte {
   position: absolute;
-  width: 60%;
+  width: 70%;
   left: 20%;
-  bottom: 24%;
+  bottom: 20%;
 }
 
 .button {
