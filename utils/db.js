@@ -16,7 +16,7 @@ async function connect() {
     await mongoose.disconnect();
   }
   const db = await mongoose.connect(
-    "mongodb+srv://kociela:admin@cluster0.0nsvwc0.mongodb.net/test"
+    "mongodb+srv://kociela:admin@cluster0.0nsvwc0.mongodb.net/"
   );
   console.log("new connection");
   connection.isConnected = db.connections[0].readyState;

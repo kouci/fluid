@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "@/components/Layout";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,16 +24,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.button}>
-            <Link
-              href="/precommander"
-              style={{
-                color: "black",
-                textDecoration: "none",
-                fontWeight: "bold",
-              }}
-            >
-              <p>Pré-Commander dès Maintenant</p>
-            </Link>
+            <p>pré-commander dès maintenant</p>
           </div>
         </div>
       </div>

@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +125,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -275,4 +275,73 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+/* styles/Home.module.css */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Ceci ajoute un léger fondu noir sur l'image de fond */
+  color: white; /* Le texte sera en blanc */
+}
+
+.overlay h1 {
+  position: relative;
+  font-size: 3.5em;
+  font-weight: 700;
+
+  left: 500px;
+  bottom: 150px;
+}
+
+.overlay p {
+  font-size: 1.2em;
+}
+
+.divTexte {
+  position: relative;
+  width: 300px;
+  left: 500px;
+  bottom: 155px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 10px;
+  padding: 5px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  top: 120px;
+  position: relative;
+  box-shadow: none;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
 }

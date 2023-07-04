@@ -1,5 +1,6 @@
 .navbar {
-  background-color: #203040;
+  background-color: #6adabc;
+  box-shadow: none;
 }
 .navbar a {
   color: white;
@@ -8,6 +9,7 @@
 
 .main {
   min-height: 80vh;
+  
 }
 
 .footer {
@@ -16,7 +18,7 @@
 
 .icon {
   margin-left: 10px;
-  margin-top: 7px;
+  margin-top: 15px;
 }
 
 .image {
