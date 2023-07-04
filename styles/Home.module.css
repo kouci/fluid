@@ -307,7 +307,7 @@
   position: absolute;
   font-size: 3.5em;
   font-weight: 700;
-
+  display: inline;
   left: 20%;
   bottom: 70%;
 }
